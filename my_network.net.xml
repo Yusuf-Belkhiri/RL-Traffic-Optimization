@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-10-24 18:26:28 by Eclipse SUMO netedit Version 1.20.0
+<!-- generated on 2024-11-07 02:27:28 by Eclipse SUMO netedit Version 1.20.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -62,8 +62,14 @@
         <lane id="E8_0" index="0" speed="13.89" length="136.56" shape="-101.13,98.87 -4.57,2.30"/>
     </edge>
 
+    <tlLogic id="J11" type="static" programID="0" offset="0">
+        <phase duration="45" state="OOOrr"/>
+        <phase duration="42" state="OOOGG"/>
+        <phase duration="3"  state="OOOyy"/>
+    </tlLogic>
+
     <junction id="J10" type="dead_end" x="-100.00" y="0.00" incLanes="" intLanes="" shape="-100.00,0.00 -100.00,-9.60"/>
-    <junction id="J11" type="priority" x="0.00" y="0.00" incLanes="E6_0 E6_1 E6_2 E8_0" intLanes=":J11_0_0 :J11_0_1 :J11_0_2 :J11_3_0 :J11_3_1" shape="1.66,0.00 1.66,-9.60 -6.18,-9.60 -6.18,0.00 -5.39,0.13 -5.23,0.29 -5.23,0.52 -5.39,0.81 -5.70,1.17 -3.43,3.43 -1.34,1.53 -0.44,0.86 0.35,0.38 1.06,0.10">
+    <junction id="J11" type="traffic_light" x="0.00" y="0.00" incLanes="E6_0 E6_1 E6_2 E8_0" intLanes=":J11_0_0 :J11_0_1 :J11_0_2 :J11_3_0 :J11_3_1" shape="1.66,0.00 1.66,-9.60 -6.18,-9.60 -6.18,0.00 -5.39,0.13 -5.23,0.29 -5.23,0.52 -5.39,0.81 -5.70,1.17 -3.43,3.43 -1.34,1.53 -0.44,0.86 0.35,0.38 1.06,0.10">
         <request index="0" response="00000" foes="11000" cont="0"/>
         <request index="1" response="00000" foes="11000" cont="0"/>
         <request index="2" response="00000" foes="11000" cont="0"/>
@@ -73,11 +79,11 @@
     <junction id="J12" type="dead_end" x="100.00" y="0.00" incLanes="E7_0 E7_1 E7_2" intLanes="" shape="100.00,-9.60 100.00,0.00"/>
     <junction id="J13" type="dead_end" x="-100.00" y="100.00" incLanes="" intLanes="" shape="-100.00,100.00 -102.26,97.74"/>
 
-    <connection from="E6" to="E7" fromLane="0" toLane="0" via=":J11_0_0" dir="s" state="M"/>
-    <connection from="E6" to="E7" fromLane="1" toLane="1" via=":J11_0_1" dir="s" state="M"/>
-    <connection from="E6" to="E7" fromLane="2" toLane="2" via=":J11_0_2" dir="s" state="M"/>
-    <connection from="E8" to="E7" fromLane="0" toLane="1" via=":J11_3_0" dir="l" state="m"/>
-    <connection from="E8" to="E7" fromLane="0" toLane="2" via=":J11_3_1" dir="l" state="m"/>
+    <connection from="E6" to="E7" fromLane="0" toLane="0" via=":J11_0_0" tl="J11" linkIndex="0" dir="s" state="O"/>
+    <connection from="E6" to="E7" fromLane="1" toLane="1" via=":J11_0_1" tl="J11" linkIndex="1" dir="s" state="O"/>
+    <connection from="E6" to="E7" fromLane="2" toLane="2" via=":J11_0_2" tl="J11" linkIndex="2" dir="s" state="O"/>
+    <connection from="E8" to="E7" fromLane="0" toLane="1" via=":J11_3_0" tl="J11" linkIndex="3" dir="l" state="o"/>
+    <connection from="E8" to="E7" fromLane="0" toLane="2" via=":J11_3_1" tl="J11" linkIndex="4" dir="l" state="o"/>
 
     <connection from=":J11_0" to="E7" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":J11_0" to="E7" fromLane="1" toLane="1" dir="s" state="M"/>
