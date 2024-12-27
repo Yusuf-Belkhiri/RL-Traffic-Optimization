@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-11-09 01:09:38 by Eclipse SUMO netedit Version 1.20.0
+<!-- generated on 2024-11-29 03:31:03 by Eclipse SUMO netedit Version 1.20.0
 -->
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
-        <sumocfg-file value="c:/Users/hamza/Desktop/ESI 5/RL/TP/PROJECT/MyProject/RL-Traffic-Optimization/config/my_simulation.sumocfg"/>
-        <additional-files value=""/>
+        <sumocfg-file value="my_simulation.sumocfg"/>
         <route-files value="my_simulation.rou.xml"/>
-        <sumo-net-file value="c:/Users/hamza/Desktop/ESI 5/RL/TP/PROJECT/MyProject/RL-Traffic-Optimization/config/my_network.net.xml"/>
+        <sumo-net-file value="my_network.net.xml"/>
     </input>
 
     <processing>
@@ -29,9 +28,5 @@
     <pedestrian>
         <walkingareas value="0"/>
     </pedestrian>
-
-    <netedit>
-        <ignore.routeelements value="false"/>
-    </netedit>
 
 </configuration>
